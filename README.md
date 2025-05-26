@@ -103,11 +103,3 @@ Automatically checks if your game uses a version of `ctp-iwg-framework` >= `10.8
 
 - Ensure your Google Vision API credentials file is located inside the `webfont-report` package directory as `vision.config.json`.
 - Set up your GITHUB_TOKEN if using repo-scanning features.
-
----
-
-## 🧑‍💻 Author
-
-Developed by [@iriganas93](https://github.com/iriganas93)
-
----
