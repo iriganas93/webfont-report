@@ -1,0 +1,8 @@
+{
+  "imageDir": "./non-production-raw-assets/scene",
+  "componentDir": "./src/scenes",
+  "resultPath": "./webfonts-report/ocr-results.json",
+  "textMapPath": "./webfonts-report/ocr-textMap.json",
+  "summaryPath": "./webfonts-report/summary.json",
+  "excludedFolders": ["loading", "particles", "bitmapFont"]
+}
