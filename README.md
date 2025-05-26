@@ -1,6 +1,7 @@
 # 📦 Webfont Report CLI
 
-A utility to scan image assets in game projects and detect embedded text using Google Cloud Vision (or optionally EasyOCR), generate OCR reports, and validate usage of supported webfont-ready framework versions.
+A utility to scan image assets in game projects and 
+detect embedded text using Google Cloud Vision, generate OCR reports, and validate usage of supported webfont-ready framework versions.
 
 ---
 
