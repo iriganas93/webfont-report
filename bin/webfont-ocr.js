@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const { getWebFontOCR } = require("../index");
 
-const CONFIG_FILE = "webfont-report.config.json";
+const CONFIG_FILE = "webfont-ocr.config.json";
 const defaultConfigPath = path.resolve(__dirname, "../default-config.json");
 
 const args = process.argv.slice(2);
@@ -24,7 +24,7 @@ if (args.includes("init")) {
 // Default behavior: run analysis
 const configPath = path.resolve(process.cwd(), CONFIG_FILE);
 if (!fs.existsSync(configPath)) {
-    console.error(`❌ Missing ${CONFIG_FILE}. Run: pnpm webfont-report init`);
+    console.error(`❌ Missing ${CONFIG_FILE}. Run: pnpm webfont-ocr init`);
     process.exit(1);
 }
 
