@@ -86,6 +86,7 @@ const getResourceUsageByLayer = (ocrResults, layerGroups) => {
         if (!data.hasText || !Array.isArray(data.usedInComponents)) continue;
 
         let matched = false;
+        const isSpine = imageKey.includes("spine");
 
         for (const componentPath of data.usedInComponents) {
             const group = findBestLayerGroup(componentPath, layerGroups);
@@ -93,13 +94,18 @@ const getResourceUsageByLayer = (ocrResults, layerGroups) => {
 
             if (!resultByGroup[simplifiedKey]) {
                 resultByGroup[simplifiedKey] = {
-                    count: 0,
-                    images: new Set(),
+                    sprite: new Set(),
+                    spine: new Set(),
                     files: new Set(),
                 };
             }
 
-            resultByGroup[simplifiedKey].images.add(imageKey);
+            if (isSpine) {
+                resultByGroup[simplifiedKey].spine.add(imageKey);
+            } else {
+                resultByGroup[simplifiedKey].sprite.add(imageKey);
+            }
+
             resultByGroup[simplifiedKey].files.add(componentPath);
 
             if (!group) {
@@ -113,13 +119,18 @@ const getResourceUsageByLayer = (ocrResults, layerGroups) => {
             const fallback = "uncategorized";
             if (!resultByGroup[fallback]) {
                 resultByGroup[fallback] = {
-                    count: 0,
-                    images: new Set(),
+                    sprite: new Set(),
+                    spine: new Set(),
                     files: new Set(),
                 };
             }
 
-            resultByGroup[fallback].images.add(imageKey);
+            if (isSpine) {
+                resultByGroup[fallback].spine.add(imageKey);
+            } else {
+                resultByGroup[fallback].sprite.add(imageKey);
+            }
+
             console.log(`📎 Uncategorized image (no components): ${imageKey}`);
         }
     }
@@ -128,8 +139,14 @@ const getResourceUsageByLayer = (ocrResults, layerGroups) => {
     const gameLayersUsage = {};
     for (const [group, sets] of Object.entries(resultByGroup)) {
         gameLayersUsage[group] = {
-            count: sets.images.size,
-            images: Array.from(sets.images),
+            count: {
+                sprites: sets.sprite.size,
+                spines: sets.spine.size,
+            },
+            images: {
+                sprites: Array.from(sets.sprite),
+                spines: Array.from(sets.spine),
+            },
             files: Array.from(sets.files),
         };
     }
