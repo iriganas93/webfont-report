@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { analyze } = require("../index");
+const { getWebFontOCR } = require("../index");
 
 const CONFIG_FILE = "webfont-report.config.json";
 const defaultConfigPath = path.resolve(__dirname, "../default-config.json");
@@ -29,14 +29,18 @@ if (!fs.existsSync(configPath)) {
 }
 
 const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
-
 const resolveFromRoot = (p) => path.resolve(process.cwd(), p);
 
-analyze({
+getWebFontOCR({
     imageDir: resolveFromRoot(config.imageDir),
     componentDir: resolveFromRoot(config.componentDir),
-    resultPath: resolveFromRoot(config.resultPath),
-    textMapPath: resolveFromRoot(config.textMapPath),
-    summaryPath: resolveFromRoot(config.summaryPath),
-    excludedFolders: config.excludedFolders || []
+    resultPath: config?.textMapPath ? resolveFromRoot(config.resultPath) : null,
+    textMapPath: config?.textMapPath ? resolveFromRoot(config.textMapPath) : null,
+    summaryPath: config?.summaryPath ? resolveFromRoot(config.summaryPath) : null,
+    layerFilesPath: config.layerFilesPath ? resolveFromRoot(config.layerFilesPath) : null,
+    gameLayers: config.gameLayers,
+    excludedFolders: config.excludedFolders || [],
+}).then((result) => {
+    console.log(`📊 Resource usage by game layer:`, result.counts);
+    console.log("✅ Analysis complete.");
 });

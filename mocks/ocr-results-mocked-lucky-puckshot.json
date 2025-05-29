@@ -1,0 +1,267 @@
+{
+  "gameplay/backgrounds/background.jpg": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/bitmapFont/basic-number-font-export.png": {
+    "hasText": true,
+    "textRaw": "40k7\n\u20ac2$\n86\u00b0\n\u00a3913",
+    "confidence": 0.83
+  },
+  "gameplay/sprite/common/orientation_overlay.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/common/resume_button.png": {
+    "hasText": true,
+    "textRaw": "||\nGAME PAUSED",
+    "confidence": 0.74
+  },
+  "gameplay/sprite/end-summary/es-text-1.png": {
+    "hasText": true,
+    "textRaw": "WINNER!",
+    "confidence": 0.95
+  },
+  "gameplay/sprite/end-summary/es-text-2.png": {
+    "hasText": true,
+    "textRaw": "NICE WITH!",
+    "confidence": 0.72
+  },
+  "gameplay/sprite/end-summary/es-text-3.png": {
+    "hasText": true,
+    "textRaw": "BIG WIND",
+    "confidence": 0.72
+  },
+  "gameplay/sprite/end-summary/es-text-4.png": {
+    "hasText": true,
+    "textRaw": "MECA WIN!",
+    "confidence": 0.86
+  },
+  "gameplay/sprite/end-summary/es-text-5.png": {
+    "hasText": true,
+    "textRaw": "JACKPOT WIN!",
+    "confidence": 0.93
+  },
+  "gameplay/sprite/mainGame/wager-money-button-hit.png": {
+    "hasText": true,
+    "textRaw": "MONEY MODE",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/mainGame/wager-money-button-hover.png": {
+    "hasText": true,
+    "textRaw": "MONEY MODE",
+    "confidence": 0.97
+  },
+  "gameplay/sprite/mainGame/wager-money-button.png": {
+    "hasText": true,
+    "textRaw": "MONEY MODE",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/mainGame/wager-play-button-hit.png": {
+    "hasText": true,
+    "textRaw": "PLAY",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/mainGame/wager-play-button-hover.png": {
+    "hasText": true,
+    "textRaw": "PLAY",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/mainGame/wager-play-button.png": {
+    "hasText": true,
+    "textRaw": "PLAY",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/mainGame/wager-ticket-cost.png": {
+    "hasText": true,
+    "textRaw": "TICKET COST",
+    "confidence": 0.99
+  },
+  "gameplay/ui/close-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/close-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/close.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/home-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/home-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/home-hover.png": {
+    "hasText": true,
+    "textRaw": "G",
+    "confidence": 0.55
+  },
+  "gameplay/ui/home.png": {
+    "hasText": true,
+    "textRaw": "C",
+    "confidence": 0.79
+  },
+  "gameplay/ui/htp-1.png": {
+    "hasText": true,
+    "textRaw": "HOW TO PLAY\nYOU START THE GAME WITH 3 ROUNDS.\nCLICK 'START ROUND' TO POPULATE THE GRID WITH 'YOUR NUMBERS' TO MATCH AGAINST THE \"WINNING NUMBERS',\nOR CRAZY ICONS WHICH AUTOMATICALLY RESULT IN A MATCHED SPOT.\nAT THE END OF A ROUND, MATCHED NUMBERS AND CRAZY ICONS WILL BE LOCKED IN PLACE.\nIN THE NEXT ROUND, NON-MATCHED NUMBERS WILL BE REMOVED & REPLACED WITH\nNEWLY GENERATED 'YOUR NUMBERS' OR CRAZY ICONS.\nCOMPLETE A COLUMN OF FIVE MATCHED \"WINNING NUMBERS' TO UNLOCK AN EXTRA ROUND\nREVEAL PRIZE BOOSTER! TO BOOST THE VALUE OF PRIZES IN THE PRIZE TABLE.\nTHE GAME ENDS ONCE ALL ROUNDS ARE COMPLETE.",
+    "confidence": 0.97
+  },
+  "gameplay/ui/htp-2.png": {
+    "hasText": true,
+    "textRaw": "HOW TO PLAY\nWITHIN 'YOUR NUMBERS', MATCH ALL\nFOUR CORNERS TO ANY OF THE\n\"WINNING NUMBERS' TO WIN A PRIZE.\nMATCH ALL FIVE 'YOUR NUMBERS'\nIN ANY HORIZONTAL OR VERTICAL LINE TO WIN\nTHE CORRESPONDING PRIZE IN THE PRIZE TABLE.",
+    "confidence": 0.96
+  },
+  "gameplay/ui/info-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/info-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/info.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/loader-wheel.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/minus-button-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/minus-button-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/minus-button-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/minus-button.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/next-arrow-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/next-arrow-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/next-arrow.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/play-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/play.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/plus-button-disabled.png": {
+    "hasText": true,
+    "textRaw": "+",
+    "confidence": 0.89
+  },
+  "gameplay/ui/plus-button-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/plus-button-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/plus-button.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/settings-holder.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/sound-off-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/sound-off-hit.png": {
+    "hasText": true,
+    "textRaw": "\u2611",
+    "confidence": 0.65
+  },
+  "gameplay/ui/sound-off.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/sound-on-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/sound-on-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/sound-on.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/ui/ticket-text.png": {
+    "hasText": true,
+    "textRaw": "\u041f\u0421\u041a\u0415\u0422",
+    "confidence": 0.92
+  },
+  "gameplay/ui/wager-bar.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "spines/game-0.png": {
+    "hasText": true,
+    "textRaw": "\u25a1\n\u56de \u56de",
+    "confidence": 0.87
+  },
+  "spines/game-1.png": {
+    "hasText": true,
+    "textRaw": "+3\n+5\nO\nO\nEXTRA\nPUK!\n+2\n+4\nPLAY FINISH\n150\n1,500\n$1,000\n\u00a350,000\n\u00a3100\n36\n30\n\u00a320\nBONUS\n\u00a310\n0000000,\nSLSSO\nVYLEP\u0160EN\u00cd\nODM\u011aN!\n\u00a31,000\n\u00a350,000\n\u00a31,000\n\u00a350,000\n\u00a31,500\n\u00a31,500\n\u00a320\n\u00a330\n\u00a330\n\u2610 \u2610 \u2610\n\u00a34\n\u00a310\n\u00a3100\n24\n\u00a310\n\u00a3100\n\u00a33\n\u00a36\n\u00a315\n\u00a3150\n\u00a33\n\u00a36\n\u00a315\n\u00a3150\n\u3141\u3141\n\u3141\u3141\u3141",
+    "confidence": 0.83
+  }
+}

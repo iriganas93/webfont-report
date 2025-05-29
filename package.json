@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "webfont-report": "./bin/webfont-report.js",
+    "webfont-ocr": "bin/webfont-ocr.js",
     "check-webfont-support": "./bin/check-webfont-support.js",
     "list-game-repos": "./bin/list-game-repos.js"
   },
@@ -15,10 +15,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.7.1",
   "dependencies": {
     "@google-cloud/vision": "^5.1.0",
     "node-fetch": "^3.3.2",
     "semver": "^7.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.27.0",
+    "prettier": "^3.5.3"
   }
 }

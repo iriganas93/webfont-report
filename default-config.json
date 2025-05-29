@@ -3,6 +3,16 @@
   "componentDir": "./src/scenes",
   "resultPath": "./webfonts-report/ocr-results.json",
   "textMapPath": "./webfonts-report/ocr-textMap.json",
-  "summaryPath": "./webfonts-report/summary.json",
-  "excludedFolders": ["loading", "particles", "bitmapFont"]
+  "summaryPath": "./webfonts-report/ocr-summary.json",
+  "excludedFolders": ["loading", "particles", "bitmapFont"],
+  "gameLayers": [
+    "interruption",
+    "gameLayer/howToPlay",
+    "settings",
+    "gameLayer/welcomeScreen",
+    "gameLayer/mainGame/wager",
+    "gameLayer/prizeBanner",
+    "gameLayer/winCelebration",
+    "gameLayer/mainGame/bonusGame"
+  ]
 }

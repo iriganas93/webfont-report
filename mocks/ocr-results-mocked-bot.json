@@ -1,0 +1,357 @@
+{
+  "gameplay/sprite/common/loader-wheel-segment.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/common/resume_button.png": {
+    "hasText": true,
+    "textRaw": "HRA POZASTAVENA",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/game/close-hover.png": {
+    "hasText": true,
+    "textRaw": "✓",
+    "confidence": 0.45
+  },
+  "gameplay/sprite/game/close.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/holder-demo.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/holder.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/home-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/home-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/home.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/htp-arrow-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/htp-arrow.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/htp-box-1.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/htp-box-arrow.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/info-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/info-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/info.png": {
+    "hasText": true,
+    "textRaw": "i",
+    "confidence": 0.74
+  },
+  "gameplay/sprite/game/logo-small.png": {
+    "hasText": true,
+    "textRaw": "BOOK\nOF\nTREASURE",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/game/minus-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/minus-hit.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/minus.png": {
+    "hasText": true,
+    "textRaw": "-",
+    "confidence": 0.88
+  },
+  "gameplay/sprite/game/multiplier-glow.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/multiplier.png": {
+    "hasText": true,
+    "textRaw": "2x",
+    "confidence": 0.88
+  },
+  "gameplay/sprite/game/particle.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/pip-off.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/pip-on.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/plus-disabled.png": {
+    "hasText": true,
+    "textRaw": "+",
+    "confidence": 0.95
+  },
+  "gameplay/sprite/game/plus-hit.png": {
+    "hasText": true,
+    "textRaw": "+",
+    "confidence": 0.95
+  },
+  "gameplay/sprite/game/plus.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/price-holder.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/sound-off-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/sound-off-hover.png": {
+    "hasText": true,
+    "textRaw": "×",
+    "confidence": 0.64
+  },
+  "gameplay/sprite/game/sound-off.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/sound-on-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/sound-on-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/game/sound-on.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/translations/click-anywhere.png": {
+    "hasText": true,
+    "textRaw": "PRO POKRAČOVÁNÍ KLIKNĚTE KAMKOLIV",
+    "confidence": 0.96
+  },
+  "gameplay/sprite/translations/close-2.png": {
+    "hasText": true,
+    "textRaw": "ZAVŘÍT",
+    "confidence": 0.91
+  },
+  "gameplay/sprite/translations/esp-text-1.png": {
+    "hasText": true,
+    "textRaw": "VYHRÁLI JSTE",
+    "confidence": 0.97
+  },
+  "gameplay/sprite/translations/esp-text-2.png": {
+    "hasText": true,
+    "textRaw": "PĚKNÁ VÝHRA!",
+    "confidence": 0.9
+  },
+  "gameplay/sprite/translations/esp-text-3.png": {
+    "hasText": true,
+    "textRaw": "VELKÁ VÝHRA!",
+    "confidence": 0.93
+  },
+  "gameplay/sprite/translations/esp-text-4.png": {
+    "hasText": true,
+    "textRaw": "MEGA VÝHRA!",
+    "confidence": 0.95
+  },
+  "gameplay/sprite/translations/esp-text-5.png": {
+    "hasText": true,
+    "textRaw": "SUPER MEGA VÝHRA!",
+    "confidence": 0.95
+  },
+  "gameplay/sprite/translations/esp-text-6.png": {
+    "hasText": true,
+    "textRaw": "JACKPOT!",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/translations/htp-box-text-1.png": {
+    "hasText": true,
+    "textRaw": "EXTRA KNIHA\nEXTRA SYMBOL\nEXTRA PÍSMENO\nSYMBOL BLAST\nVYLEPŠENÍ ODMĚN\nVÝHERNÍ NÁSOBITEL\nGARANTOVANÁ VÝHRA\nZÍSKÁTE DALŠÍ KNIHU KOTEVŘENÍ\nZÍSKÁTE SYMBOL NAVÍC DO TABULKY ODMĚN\nZÍSKÁTE DALŠÍ PÍSMENO DO POLE SUPER NEBO PRIZE\nSNÍŽÍ POČET POTŘEBNÝCH SYMBOLŮ PRO JEDNU SADU SYMBOLŮ O JEDEN V TABULCE ODMĚN\nZVÝŠÍ HODNOTU ODMĚN V TABULCE ODMĚN\nNÁSOBÍ VÝHRU X2 V PRIZE NEBO SUPER HŘE\nGARANTUJE VÝHRU VE HŘE",
+    "confidence": 0.95
+  },
+  "gameplay/sprite/translations/htp-box-text-2.png": {
+    "hasText": true,
+    "textRaw": "OTEVŘÍT VŠECHNY KNIHY\nOTEVŘE VŠECHNY ZBÝVAJÍCÍ KNIHY\nEXTRA SYMBOLY\nSUPER PRIZE HRA\nSUPER SYMBOL BLAST\nZÍSKÁTE DVA NEBO VÍCE SYMBOLÜ DO TABULKY ODMĚN\nZÍSKÁTE VSTUP DO SUPER PRIZE HRY\nSNIŽÍ POČET POTŘEBNÝCH SYMBOLŮ O JEDEN PRO VŠECHNY SYMBOLY V TABULCE ODMĚN\nSUPER PRIZE VYLEPŠENÍ ZVÝŠÍ HODNOTU ODMĚN PRO VŠECHNY SYMBOLY (S VÝJIMKOU NEJVYŠŠÍ ODMĚNY)\nVÝHERNÍ NÁSOBITEL\nNÁSOBÍ VÝHRU X2 V SUPER PRIZE HŘE\nVÝHERNÍ KNIHA\nZÍSKÁTE K OTEVŘENÍ VÝHERNÍ KNIHU KTERÁ ZARUČUJE VÝHRU",
+    "confidence": 0.95
+  },
+  "gameplay/sprite/translations/htp-text-1.png": {
+    "hasText": true,
+    "textRaw": "OTEVŘETE PĚT KNIH A ODHALTE SYMBOLY\nDO VÝHERNÍ TABULKY NEBO PÍSMENA",
+    "confidence": 0.96
+  },
+  "gameplay/sprite/translations/htp-text-2.png": {
+    "hasText": true,
+    "textRaw": "POSBÍREJTE SADU SYMBOLŮ VE VÝHERNÍ TABULCE A\nVYHRAJTE PŘÍSLUŠNOU ODMĚNU",
+    "confidence": 0.96
+  },
+  "gameplay/sprite/translations/htp-text-3.png": {
+    "hasText": true,
+    "textRaw": "POSBÍREJTE PÍSMENA\nB, O, N, U, SK\nODEMKNUTÍ BONUS\nHRY. ZÍSKEJTE\nODMĚNY KTERÉ\nODHALÍTE.\nPOSBÍREJTE PÍSMENA S, U, P,\nE, R SPOLEČNĚ S BONUS\nNEBO PRIZE K VYLEPŠENÍ\nODMĚN A VYHRAJTE EXTRA\nODMĚNY\nPOSBÍREJTE PÍSMENA\nP, R, I, Z, E KODEMČENÍ\nHRY PRIZE.\nVYBERTE ORNAMENT K\nODHALENÍ VAŠÍ\nODMĚNY",
+    "confidence": 0.96
+  },
+  "gameplay/sprite/translations/htp-title.png": {
+    "hasText": true,
+    "textRaw": "JAK HRÁT",
+    "confidence": 0.97
+  },
+  "gameplay/sprite/translations/money-mode-hit.png": {
+    "hasText": true,
+    "textRaw": "ZA PENÍZE",
+    "confidence": 0.94
+  },
+  "gameplay/sprite/translations/money-mode.png": {
+    "hasText": true,
+    "textRaw": "ZA PENÍZE",
+    "confidence": 0.94
+  },
+  "gameplay/sprite/translations/more-info.png": {
+    "hasText": true,
+    "textRaw": "VÍCE INFORMACÍ",
+    "confidence": 0.94
+  },
+  "gameplay/sprite/translations/play-hit.png": {
+    "hasText": true,
+    "textRaw": "HRAT",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/translations/play.png": {
+    "hasText": true,
+    "textRaw": "HRÁT",
+    "confidence": 0.96
+  },
+  "gameplay/sprite/translations/select-all-01.png": {
+    "hasText": true,
+    "textRaw": "VYBERTE VŠECHNY KODHALENÍ\nVAŠICH ODMĚN!",
+    "confidence": 0.96
+  },
+  "gameplay/sprite/translations/select-all-02.png": {
+    "hasText": true,
+    "textRaw": "VYBERTE JEDNU KODHALENÍ\nVAŠÍ ODMĚNY!",
+    "confidence": 0.93
+  },
+  "gameplay/sprite/translations/title.png": {
+    "hasText": true,
+    "textRaw": "CENA TIKETU",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/translations/ws-text-1.png": {
+    "hasText": true,
+    "textRaw": "SBÍREJTE PÍSMENA A ODEMKNĚTE SUPER\nNABITÝ BONUS A PRIZE HRY",
+    "confidence": 0.96
+  },
+  "gameplay/sprite/translations/ws-text-2.png": {
+    "hasText": true,
+    "textRaw": "VÝBĚREM 5 KNIH ODHALÍTE\nSYMBOLY A ODMĚNY",
+    "confidence": 0.95
+  },
+  "orientation/horizontal-mode-only-text.png": {
+    "hasText": true,
+    "textRaw": "OTOČTE SVÉ ZAŘÍZENÍ",
+    "confidence": 0.9
+  },
+  "spine/bonus-letters.png": {
+    "hasText": true,
+    "textRaw": "OURZSEI P\nOSNEP\nORNUZBPERUPSE",
+    "confidence": 0.84
+  },
+  "spine/bonus-statues.png": {
+    "hasText": true,
+    "textRaw": "EXTRA KNIHA!\n*5\nSYMBOL BLAST\nEXTRA SYMBOL!\n×4\n*6\nOTEVŘÍT GARANTOVANÁ\nVŠECHNY KNIHY VÝHERNÍ HRA!\nSUPER SYMBOL BLAST SUPER PRIZE HRA EXTRA PÍSMENO!\n*7*3\nEXTRA SYMBOLY\nSUPER PRIZE VYLEPŠENÍ VÝHERNÍ NÁSOBITEL VYLEPŠENÍ ODMĚN VÝHERNÍ KNIHA",
+    "confidence": 0.89
+  },
+  "spine/book-reveal.png": {
+    "hasText": true,
+    "textRaw": "O=\n་\nNM\nE\nBpoo\nN\nSS\nU\nS\nR\nR",
+    "confidence": 0.85
+  },
+  "spine/books-left.png": {
+    "hasText": true,
+    "textRaw": "ZBÝVAJÍCÍ 1021\nKNIHA\nZBÝVAJÍCÍ\nKNIHY\n679850814653740265",
+    "confidence": 0.86
+  },
+  "spine/coin-effect.png": {
+    "hasText": true,
+    "textRaw": "00",
+    "confidence": 0.72
+  },
+  "spine/guaranteed-win.png": {
+    "hasText": true,
+    "textRaw": "GARANTOVANÁ VÝHRA!",
+    "confidence": 0.95
+  },
+  "spine/main-game-book.png": {
+    "hasText": true,
+    "textRaw": "C",
+    "confidence": 0.81
+  },
+  "spine/ornament.png": {
+    "hasText": true,
+    "textRaw": "าณ",
+    "confidence": 0.82
+  },
+  "spine/pyramid.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "spine/symbols.png": {
+    "hasText": true,
+    "textRaw": "C\nKč",
+    "confidence": 0.78
+  },
+  "spine/winning-rays.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  }
+}
