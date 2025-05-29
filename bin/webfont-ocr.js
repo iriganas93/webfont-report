@@ -31,13 +31,34 @@ if (!fs.existsSync(configPath)) {
 const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
 const resolveFromRoot = (p) => path.resolve(process.cwd(), p);
 
+if (!config?.imageDir) {
+    console.error(
+        `❌ Missing "imageDir" in ${CONFIG_FILE}. Please ensure to add the main folder of the raw assets that will be scanned and processed with OCR.`,
+    );
+    process.exit(1);
+}
+
+if (!config?.componentDir) {
+    console.error(
+        `❌ Missing "componentDir" in ${CONFIG_FILE}. Please ensure to add the main folder of the game components to check the usage of resources in code.`,
+    );
+    process.exit(1);
+}
+
+if (!config?.gameLayers) {
+    console.error(
+        `❌ Missing "gameLayers" in ${CONFIG_FILE}. Please ensure you define the game layers based on the game structure to categorize resources usage by layer.`,
+    );
+    process.exit(1);
+}
+
 getWebFontOCR({
     imageDir: resolveFromRoot(config.imageDir),
     componentDir: resolveFromRoot(config.componentDir),
     resultPath: config?.textMapPath ? resolveFromRoot(config.resultPath) : null,
     textMapPath: config?.textMapPath ? resolveFromRoot(config.textMapPath) : null,
     summaryPath: config?.summaryPath ? resolveFromRoot(config.summaryPath) : null,
-    layerFilesPath: config.layerFilesPath ? resolveFromRoot(config.layerFilesPath) : null,
+    layerFilesPath: config?.layerFilesPath ? resolveFromRoot(config.layerFilesPath) : null,
     gameLayers: config.gameLayers,
     excludedFolders: config.excludedFolders || [],
 }).then((result) => {
