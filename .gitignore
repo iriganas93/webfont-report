@@ -1,4 +1,4 @@
 /node_modules
 .idea
 .env
-.vision.config.json
+vision.config.json
