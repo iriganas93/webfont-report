@@ -44,6 +44,7 @@ const getCodeFilesUsage = (ocrResults, gameComponentsDirectoryPath) => {
 
 const getOCRTextMap = (ocrResults) => {
     const map = {};
+
     for (const [rel, data] of Object.entries(ocrResults)) {
         if (data.hasText && data.textRaw) {
             const base = path.basename(rel, path.extname(rel));
@@ -59,10 +60,8 @@ const findBestLayerGroup = (componentPath, layerGroups) => {
     let bestMatch = null;
 
     for (const group of layerGroups) {
-        if (componentPath.includes(group)) {
-            if (!bestMatch || group.length > bestMatch.length) {
-                bestMatch = group;
-            }
+        if (componentPath.includes(group) && (!bestMatch || group.length > bestMatch.length)) {
+            bestMatch = group;
         }
     }
 
