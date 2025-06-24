@@ -1,0 +1,492 @@
+{
+  "gameplay/gradient.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-0.png": {
+    "hasText": true,
+    "textRaw": "HOW TO PLAY ROUND\nROUND COMPLETE ROUND OF",
+    "confidence": 0.99
+  },
+  "gameplay/spine/cash-bolt-expander-1.png": {
+    "hasText": true,
+    "textRaw": "PLAY\nQUA",
+    "confidence": 0.85
+  },
+  "gameplay/spine/cash-bolt-expander-2.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-3.png": {
+    "hasText": true,
+    "textRaw": "FINISH PLAY",
+    "confidence": 0.99
+  },
+  "gameplay/spine/cash-bolt-expander-4.png": {
+    "hasText": true,
+    "textRaw": "6\n3\nFVR",
+    "confidence": 0.66
+  },
+  "gameplay/spine/cash-bolt-expander-5.png": {
+    "hasText": true,
+    "textRaw": "BOLT\nO\n\u00a31 MILLION QANL\n18",
+    "confidence": 0.78
+  },
+  "gameplay/spine/cash-bolt-expander-6.png": {
+    "hasText": true,
+    "textRaw": "CASH\n\u706b\u817f\n132\nEXPANDER\n(x2)\n\u00a3\nCH\nx2\nx2\n3\nx2\n\u00a3",
+    "confidence": 0.79
+  },
+  "gameplay/sprite/common/resume_button.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/end-summary/es-text-demo.png": {
+    "hasText": true,
+    "textRaw": "THANKS FOR\nPLAYING",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/end-summary/es-text-lose.png": {
+    "hasText": true,
+    "textRaw": "BETTER LUCK\nNEXT TIME",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/end-summary/es-text-won-1.png": {
+    "hasText": true,
+    "textRaw": "YOU HAVE\nWON",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/end-summary/es-text-won-2.png": {
+    "hasText": true,
+    "textRaw": "NICE WIN!",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/end-summary/es-text-won-3.png": {
+    "hasText": true,
+    "textRaw": "ELECTRIC WIN!",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/end-summary/es-text-won-4.png": {
+    "hasText": true,
+    "textRaw": "LIGHTNING WIN!",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/end-summary/es-text-won-5.png": {
+    "hasText": true,
+    "textRaw": "JACKPOT WIN!",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/end-summary/es-text-won-subtitle.png": {
+    "hasText": true,
+    "textRaw": "YOU HAVE WON",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/gradient.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/htp/btn-arrow-default.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/htp/btn-arrow-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/htp/btn-close-default.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/htp/btn-close-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/htp/btn-close-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/htp/htp-page-pip-off.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/htp/htp-page-pip-on.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/htp/htp-text-play.png": {
+    "hasText": true,
+    "textRaw": "PLAY",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/htp/htp-text-round.png": {
+    "hasText": true,
+    "textRaw": "ROUND",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/htp/htp-text-win.png": {
+    "hasText": true,
+    "textRaw": "WIN",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/htp-bg-glow.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/btn-round-1.png": {
+    "hasText": true,
+    "textRaw": "1",
+    "confidence": 0.95
+  },
+  "gameplay/sprite/main-game/btn-round-2.png": {
+    "hasText": true,
+    "textRaw": "2",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/btn-round-3.png": {
+    "hasText": true,
+    "textRaw": "3",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/main-game/btn-round-4.png": {
+    "hasText": true,
+    "textRaw": "4",
+    "confidence": 0.97
+  },
+  "gameplay/sprite/main-game/btn-round-5.png": {
+    "hasText": true,
+    "textRaw": "5",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/btn-round-6.png": {
+    "hasText": true,
+    "textRaw": "6",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/grid-round-1.png": {
+    "hasText": true,
+    "textRaw": "1",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/main-game/grid-round-2.png": {
+    "hasText": true,
+    "textRaw": "2",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/main-game/grid-round-3.png": {
+    "hasText": true,
+    "textRaw": "3",
+    "confidence": 0.9
+  },
+  "gameplay/sprite/main-game/grid-round-4.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/grid-round-5.png": {
+    "hasText": true,
+    "textRaw": "5",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/grid-round-6.png": {
+    "hasText": true,
+    "textRaw": "9",
+    "confidence": 0.97
+  },
+  "gameplay/sprite/main-game/meter-2-extra-rounds-default.png": {
+    "hasText": true,
+    "textRaw": "2 EXTRA ROUNDS",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/meter-2-extra-rounds-won.png": {
+    "hasText": true,
+    "textRaw": "2 EXTRA ROUNDS",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/meter-prize-game-default.png": {
+    "hasText": true,
+    "textRaw": "PRIZE GAME",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/meter-prize-game-won.png": {
+    "hasText": true,
+    "textRaw": "PRIZE GAME",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/meter-prize-pot-doubler-default.png": {
+    "hasText": true,
+    "textRaw": "PRIZE POT DOUBLER",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/meter-prize-pot-doubler-won.png": {
+    "hasText": true,
+    "textRaw": "PRIZE POT DOUBLER",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/prize-game-holder.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/prize-game-pip-off.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/prize-game-pip-on.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/prize-game-prize-holder-off.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/prize-game-prize-holder-on.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/prize-game-text-default.png": {
+    "hasText": true,
+    "textRaw": "KEEP REVEALING PRIZES UNTIL YOU REVEAL WIN!",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/prize-game-text-won.png": {
+    "hasText": true,
+    "textRaw": "GREAT PRIZE GAME WIN! YOU WON",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/prize-game-title.png": {
+    "hasText": true,
+    "textRaw": "PRIZE\nGAME",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/prize-game-win-holder.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/prize-game-win-text.png": {
+    "hasText": true,
+    "textRaw": "WIN",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/main-game/prize-pot-doubler.png": {
+    "hasText": true,
+    "textRaw": "(x2)",
+    "confidence": 0.81
+  },
+  "gameplay/sprite/main-game/prize-pot-holder.png": {
+    "hasText": true,
+    "textRaw": "PRIZE POT",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/prize-table-holder.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/prize-table-shadow.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/main-game/prize-table-title.png": {
+    "hasText": true,
+    "textRaw": "CLUSTER\nPRIZE",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/main-game/prize-table-won.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-info-default.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-info-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-info-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-settings-default.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-settings-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-settings-expanded.png": {
+    "hasText": true,
+    "textRaw": "0",
+    "confidence": 0.72
+  },
+  "gameplay/sprite/ui/btn-settings-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-sound-off-default.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-sound-off-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-sound-off-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-sound-on-default.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-sound-on-disabled.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/ui/btn-sound-on-hover.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/htw-holder.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/htw-text-1.png": {
+    "hasText": true,
+    "textRaw": "Reveal a\ncluster of 3\nor more like\nsymbols to\nwin!",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/welcome-screen/htw-text-2.png": {
+    "hasText": true,
+    "textRaw": "Reveal a\nto EXPAND\nthe grid and\ncreate more\nchances to\nwin!",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/welcome-screen/htw-text-3.png": {
+    "hasText": true,
+    "textRaw": "Collect 5\nto unlock the\nPRIZE GAME,\nwhere you are\nguaranteed\nto win a prize!",
+    "confidence": 0.99
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-1.png": {
+    "hasText": true,
+    "textRaw": "WIN UP TO",
+    "confidence": 0.98
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-2.png": {
+    "hasText": true,
+    "textRaw": "\u00a31 MILLION",
+    "confidence": 0.94
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-00.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-01.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-02.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-03.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-04.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-05.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-06.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-07.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-08.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-09.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-10.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-11.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-12.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-13.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-14.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/sprite/welcome-screen/prize-callout-shimmer-15.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  }
+}

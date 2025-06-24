@@ -1,15 +1,20 @@
 const path = require("path");
 const fs = require("fs");
 const vision = require("@google-cloud/vision");
-const orcResultsMocked = require("../mocks/ocr-results-mocked-bot.json");
-const { imagesWithoutText, imagesWithText, lowConfidenceImages } = require("../mocks/mock");
+const orcResultsMocked = require("../mocks/ocr-results-mocked-puck-shot-expander.json");
 
 const MOCK_RESULTS = true;
 
-process.env.GOOGLE_APPLICATION_CREDENTIALS = path.resolve(__dirname, "../vision.config.json");
-
-if (!fs.existsSync(process.env.GOOGLE_APPLICATION_CREDENTIALS)) {
-    console.warn("⚠️ GOOGLE_APPLICATION_CREDENTIALS not found. Vision API may fail.");
+// Always prefer env variable (as Google officially recommends)
+if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+    // fallback: check for vision.config.json in current working directory (project root)
+    const fallbackPath = path.resolve(process.cwd(), "vision.config.json");
+    if (fs.existsSync(fallbackPath)) {
+        process.env.GOOGLE_APPLICATION_CREDENTIALS = fallbackPath;
+        console.log(`✅ Using fallback vision config: ${fallbackPath}`);
+    } else {
+        console.warn("⚠️ GOOGLE_APPLICATION_CREDENTIALS not found. Vision API may fail.");
+    }
 }
 
 async function processImagesOCR(files, imageDir) {
@@ -23,7 +28,6 @@ async function processImagesOCR(files, imageDir) {
     console.log("🔍 Processing images:", files.length);
     for (const file of files) {
         const rel = path.relative(imageDir, file);
-        // console.log("🔍 Processing:", rel);
 
         try {
             const [res] = await client.documentTextDetection(file);
@@ -83,16 +87,35 @@ async function processImagesOCR(files, imageDir) {
     };
 }
 
-const MOCK_OCR_RESULT = {
-    results: orcResultsMocked,
-    withText: imagesWithText,
-    withoutText: imagesWithoutText,
-    lowConfidence: lowConfidenceImages,
+const mapOCRValues = (results) => {
+    let withText = 0;
+    let withoutText = 0;
+    const lowConfidence = [];
+
+    for (const file in results) {
+        const { hasText, confidence } = results[file];
+        if (hasText) {
+            withText++;
+            if (confidence !== null && confidence < 0.8) {
+                lowConfidence.push({ file, confidence });
+            }
+        } else {
+            withoutText++;
+        }
+    }
+
+    return {
+        results,
+        withText,
+        withoutText,
+        lowConfidence,
+    };
 };
 
 const getImagesOCR = (files, imageDir) => {
     if (MOCK_RESULTS) {
-        return Promise.resolve(MOCK_OCR_RESULT);
+        console.log("Using mocked OCR results for testing.");
+        return Promise.resolve(mapOCRValues(orcResultsMocked));
     }
     return processImagesOCR(files, imageDir);
 };

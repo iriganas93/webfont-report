@@ -61,6 +61,7 @@ getWebFontOCR({
     layerFilesPath: config?.layerFilesPath ? resolveFromRoot(config.layerFilesPath) : null,
     gameLayers: config.gameLayers,
     excludedFolders: config.excludedFolders || [],
+    copyTextImagesTo: resolveFromRoot(config.copyTextImagesTo),
 }).then((result) => {
     console.log(`📊 Resource usage by game layer:`, result.counts);
     console.log("✅ Analysis complete.");

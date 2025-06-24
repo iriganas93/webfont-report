@@ -1,9 +1,11 @@
 {
   "imageDir": "./non-production-raw-assets/scene",
   "componentDir": "./src/scenes",
-  "resultPath": "./webfonts-report/ocr-results.json",
-  "textMapPath": "./webfonts-report/ocr-textMap.json",
-  "summaryPath": "./webfonts-report/ocr-summary.json",
+  "resultPath": "./webfonts-ocr/ocr-results.json",
+  "textMapPath": "./webfonts-ocr/ocr-textMap.json",
+  "summaryPath": "./webfonts-ocr/ocr-summary.json",
+  "layerFilesPath": "webfonts-ocr/ocr-files-by-layer.json",
+  "copyTextImagesTo": "webfonts-ocr/images",
   "excludedFolders": ["loading", "particles", "bitmapFont"],
   "gameLayers": [
     "interruption",
