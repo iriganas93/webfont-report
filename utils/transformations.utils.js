@@ -1,50 +1,74 @@
 const fs = require("fs");
 const path = require("path");
 
-const getCodeFilesUsage = (ocrResults, gameComponentsDirectoryPath) => {
-    const jsFiles = [];
-
-    function collect(dir) {
-        const entries = fs.readdirSync(dir, { withFileTypes: true });
-        for (const entry of entries) {
-            const fullPath = path.join(dir, entry.name);
-            if (entry.isDirectory()) {
-                collect(fullPath);
-            } else if (entry.isFile() && entry.name.endsWith(".js")) {
-                jsFiles.push(fullPath);
-            }
+/**
+ * Recursively collect all JS files in component directory
+ */
+const collectJSFiles = (dir, jsFiles = []) => {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+            collectJSFiles(fullPath, jsFiles);
+        } else if (entry.isFile() && entry.name.endsWith(".js")) {
+            jsFiles.push(fullPath);
         }
     }
+    return jsFiles;
+};
 
-    collect(gameComponentsDirectoryPath);
+/**
+ * Scan OCR results and track image usages in code files, also check for spine usages
+ * @param {*} ocrResults — OCR parsed results
+ * @param {*} gameComponentsDirectoryPath — components folder
+ * @param {*} spineImageToRegions — spine data: { imageName: [regionNames] }
+ */
+const getCodeFilesUsage = (ocrResults, gameComponentsDirectoryPath, spineImageToRegions = {}) => {
+    const jsFiles = collectJSFiles(gameComponentsDirectoryPath);
 
     for (const [relativePath, data] of Object.entries(ocrResults)) {
         if (!data.hasText) continue;
 
-        const imageFileName = path.basename(relativePath); // e.g., text-1.png
-        const nameWithoutExt = imageFileName.replace(/\.[^/.]+$/, ""); // e.g., text-1
-        const nameBase = nameWithoutExt.replace(/[-_]\d+$/, ""); // e.g., text
+        const imageFileName = path.basename(relativePath); // full file name e.g. abc.png
+        const nameWithoutExt = imageFileName.replace(/\.[^/.]+$/, ""); // no extension
+        const nameBase = nameWithoutExt.replace(/[-_]\d+$/, ""); // stripped variant
+
+        const isSpine = relativePath.includes("spine");
 
         const usedIn = [];
 
         for (const js of jsFiles) {
             const content = fs.readFileSync(js, "utf8");
 
+            // Check for simple sprite image references
             if (content.includes(`"${imageFileName}`) || content.includes(`"${nameWithoutExt}`) || content.includes(`"${nameBase}`)) {
                 usedIn.push(path.relative(process.cwd(), js));
+                continue; // found direct reference
+            }
+
+            // If this is a spine image, also check for any regions under this image
+            if (isSpine && spineImageToRegions[imageFileName]) {
+                for (const spineRegion of spineImageToRegions[imageFileName]) {
+                    // simple region name match
+                    if (content.includes(`"${spineRegion}`) && content.includes(`autoDisplayObjectTypes.SPINE`)) {
+                        usedIn.push(path.relative(process.cwd(), js));
+                        break;
+                    }
+                }
             }
         }
 
         if (usedIn.length > 0) {
             ocrResults[relativePath].usedInComponents = usedIn;
-            // console.log(`🔗 Matched "${imageFileName}" or base in:`, usedIn);
         }
     }
 };
 
+/**
+ * Build OCR text mapping
+ */
 const getOCRTextMap = (ocrResults) => {
     const map = {};
-
     for (const [rel, data] of Object.entries(ocrResults)) {
         if (data.hasText && data.textRaw) {
             const base = path.basename(rel, path.extname(rel));
@@ -52,99 +76,95 @@ const getOCRTextMap = (ocrResults) => {
             map[key] = data.textRaw;
         }
     }
-
     return map;
 };
 
+/**
+ * Find best layer matching component path
+ */
 const findBestLayerGroup = (componentPath, layerGroups) => {
     let bestMatch = null;
-
     for (const group of layerGroups) {
         if (componentPath.includes(group) && (!bestMatch || group.length > bestMatch.length)) {
             bestMatch = group;
         }
     }
-
     return bestMatch;
 };
 
+/**
+ * Summarize simple counts by layer
+ */
 const summarizeLayerCounts = (resourceUsageByLayer) => {
     const summary = {};
-
     for (const [layer, data] of Object.entries(resourceUsageByLayer)) {
         summary[layer] = data.count || 0;
     }
-
     return summary;
 };
 
+/**
+ * Generate final grouping by layer, allowing multi-group inclusion
+ */
 const getResourceUsageByLayer = (ocrResults, layerGroups) => {
     const resultByGroup = {};
 
     for (const [imageKey, data] of Object.entries(ocrResults)) {
         if (!data.hasText || !Array.isArray(data.usedInComponents)) continue;
 
-        let matched = false;
         const isSpine = imageKey.includes("spine");
 
+        // For every usedInComponents file, check its group
         for (const componentPath of data.usedInComponents) {
             const group = findBestLayerGroup(componentPath, layerGroups);
             const simplifiedKey = group ? group.split("/").pop() : "uncategorized";
 
             if (!resultByGroup[simplifiedKey]) {
                 resultByGroup[simplifiedKey] = {
-                    sprite: new Set(),
-                    spine: new Set(),
+                    sprites: [],
+                    spines: [],
                     files: new Set(),
                 };
             }
 
-            if (isSpine) {
-                resultByGroup[simplifiedKey].spine.add(imageKey);
-            } else {
-                resultByGroup[simplifiedKey].sprite.add(imageKey);
+            // Add the image entry to the group if not already added
+            const imageArray = isSpine ? resultByGroup[simplifiedKey].spines : resultByGroup[simplifiedKey].sprites;
+            const alreadyExists = imageArray.some((entry) => entry.image === imageKey);
+            if (!alreadyExists) {
+                imageArray.push({ image: imageKey, data });
             }
 
+            // Add the specific file
             resultByGroup[simplifiedKey].files.add(componentPath);
-
-            if (!group) {
-                console.log(`📎 Uncategorized image: ${imageKey} (used in: ${componentPath})`);
-            }
-
-            matched = matched || Boolean(group);
         }
 
-        if (!matched && data.usedInComponents.length === 0) {
+        // If no usedInComponents at all, fallback to uncategorized
+        if (data.usedInComponents.length === 0) {
             const fallback = "uncategorized";
             if (!resultByGroup[fallback]) {
                 resultByGroup[fallback] = {
-                    sprite: new Set(),
-                    spine: new Set(),
+                    sprites: [],
+                    spines: [],
                     files: new Set(),
                 };
             }
 
-            if (isSpine) {
-                resultByGroup[fallback].spine.add(imageKey);
-            } else {
-                resultByGroup[fallback].sprite.add(imageKey);
-            }
-
-            console.log(`📎 Uncategorized image (no components): ${imageKey}`);
+            const imageArray = isSpine ? resultByGroup[fallback].spines : resultByGroup[fallback].sprites;
+            imageArray.push({ image: imageKey, data });
         }
     }
 
-    // Finalize results
+    // Finalize result object
     const gameLayersUsage = {};
     for (const [group, sets] of Object.entries(resultByGroup)) {
         gameLayersUsage[group] = {
             count: {
-                sprites: sets.sprite.size,
-                spines: sets.spine.size,
+                sprites: sets.sprites.length,
+                spines: sets.spines.length,
             },
             images: {
-                sprites: Array.from(sets.sprite),
-                spines: Array.from(sets.spine),
+                sprites: sets.sprites,
+                spines: sets.spines,
             },
             files: Array.from(sets.files),
         };

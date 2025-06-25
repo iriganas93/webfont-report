@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212423;
+    color: #fff;
+    margin: 0;
+    padding: 30px 5%;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+h2 {
+   margin: 0;
+}
+
+h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.layer {
+    background: #2b2d30;
+    margin-bottom: 40px;
+    padding: 10px 25px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.layer .title {
+    margin-top: 0;
+    border-bottom: 1px solid #111;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.layer .summary {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #8a919c;
+}
+.layer .summary span{
+    color: #fff;
+    font-weight: bold;
+}
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+.image-box {
+    border: 1px solid #111;
+    border-radius: 4px;
+    padding: 15px;
+    background: #212423;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.image-box .label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgb(255 133 248 / 70%);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+.image-box .label.spine {
+    background: rgba(228, 208, 79, 0.7);
+
+}
+.image-box img {
+    margin: auto 0;
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    padding: 10px;
+}
+.info {
+    font-size: 0.85em;
+    color: #8a919c;
+    font-weight: normal;
+    margin-top: auto;
+    word-break: break-word;
+}
+.text {
+    font-size: 0.9em;
+    color: #97b7d4;
+    margin-top: 10px;
+    white-space: pre-wrap;
+
+    span {
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+.files {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.files-list {
+    color: #97b7d4;
+}

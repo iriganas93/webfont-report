@@ -60,6 +60,7 @@ getWebFontOCR({
     summaryPath: config?.summaryPath ? resolveFromRoot(config.summaryPath) : null,
     layerFilesPath: config?.layerFilesPath ? resolveFromRoot(config.layerFilesPath) : null,
     gameLayers: config.gameLayers,
+    htmlViewer: config.htmlViewer,
     excludedFolders: config.excludedFolders || [],
     copyTextImagesTo: resolveFromRoot(config.copyTextImagesTo),
 }).then((result) => {

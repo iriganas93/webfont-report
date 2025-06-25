@@ -6,6 +6,7 @@
   "summaryPath": "./webfonts-ocr/ocr-summary.json",
   "layerFilesPath": "webfonts-ocr/ocr-files-by-layer.json",
   "copyTextImagesTo": "webfonts-ocr/images",
+  "htmlViewer": true,
   "excludedFolders": ["loading", "particles", "bitmapFont"],
   "gameLayers": [
     "interruption",

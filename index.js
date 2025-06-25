@@ -1,9 +1,10 @@
 const fs = require("fs");
 const path = require("path");
-const { getAllImageFilesPaths, saveReportFile } = require("./utils/file.utils");
+const { getAllImageFilesPaths, saveReportFile, generateOcrDataJS } = require("./utils/file.utils");
 const { getImagesOCR } = require("./utils/ocr.utils");
 const { getCodeFilesUsage, getOCRTextMap, getResourceUsageByLayer } = require("./utils/transformations.utils");
 const { extractSpineImageUsage } = require("./utils/spine.utils");
+const { copyHtmlViewerFiles } = require("./utils/htmlViewer.utils");
 
 /**
  * Copies all images with hasText: true into a single output folder (flat)
@@ -42,6 +43,7 @@ async function getWebFontOCR({
     summaryPath,
     layerFilesPath,
     gameLayers,
+    htmlViewer = true,
     excludedFolders = [],
     copyTextImagesTo = null,
 }) {
@@ -51,7 +53,10 @@ async function getWebFontOCR({
     console.log(`📊 Images with text: ${withText}`);
     console.log(`📊 Images without text: ${withoutText}`);
 
-    await getCodeFilesUsage(results, componentDir);
+    const spineImagesRegions = await extractSpineImageUsage(imageDir);
+    saveReportFile("webfonts-ocr/ocr-spines.json", spineImagesRegions);
+
+    await getCodeFilesUsage(results, componentDir, spineImagesRegions);
 
     if (resultPath) {
         saveReportFile(resultPath, results);
@@ -71,13 +76,15 @@ async function getWebFontOCR({
         console.log(`📋 OCR Summary written to: ${summaryPath}`);
     }
 
-    const result = await extractSpineImageUsage(imageDir);
-    saveReportFile("webfonts-ocr/ocr-spines.json", result);
+    if (htmlViewer) {
+        await copyHtmlViewerFiles("webfonts-ocr");
+    }
 
     const layersResults = getResourceUsageByLayer(results, gameLayers);
     if (layerFilesPath) {
         saveReportFile(layerFilesPath, layersResults.gameLayersUsage);
         console.log(`📋 Layer files usage written to: ${layerFilesPath}`);
+        generateOcrDataJS("webfonts-ocr", layersResults);
     }
 
     if (copyTextImagesTo) {

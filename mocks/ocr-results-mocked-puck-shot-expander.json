@@ -5,39 +5,94 @@
     "confidence": null
   },
   "gameplay/spine/cash-bolt-expander-0.png": {
-    "hasText": true,
-    "textRaw": "HOW TO PLAY ROUND\nROUND COMPLETE ROUND OF",
-    "confidence": 0.99
-  },
-  "gameplay/spine/cash-bolt-expander-1.png": {
-    "hasText": true,
-    "textRaw": "PLAY\nQUA",
-    "confidence": 0.85
-  },
-  "gameplay/spine/cash-bolt-expander-2.png": {
     "hasText": false,
     "textRaw": "",
     "confidence": null
   },
-  "gameplay/spine/cash-bolt-expander-3.png": {
+  "gameplay/spine/cash-bolt-expander-1.png": {
     "hasText": true,
-    "textRaw": "FINISH PLAY",
+    "textRaw": "£\n(x2 x2\nBOLT",
+    "confidence": 0.87
+  },
+  "gameplay/spine/cash-bolt-expander-10.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-11.png": {
+    "hasText": true,
+    "textRaw": "V",
+    "confidence": 0.56
+  },
+  "gameplay/spine/cash-bolt-expander-12.png": {
+    "hasText": true,
+    "textRaw": "CONTINAL MIND.",
+    "confidence": 0.42
+  },
+  "gameplay/spine/cash-bolt-expander-13.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-14.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-15.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-16.png": {
+    "hasText": true,
+    "textRaw": "EXPANDER CASH",
+    "confidence": 0.95
+  },
+  "gameplay/spine/cash-bolt-expander-17.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-2.png": {
+    "hasText": true,
+    "textRaw": "ROUND",
     "confidence": 0.99
+  },
+  "gameplay/spine/cash-bolt-expander-3.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
   },
   "gameplay/spine/cash-bolt-expander-4.png": {
     "hasText": true,
-    "textRaw": "6\n3\nFVR",
-    "confidence": 0.66
+    "textRaw": "FINISH HOW TO PLAY PLAY\n£ x2\nROUND ROUND COMPLETE",
+    "confidence": 0.87
   },
   "gameplay/spine/cash-bolt-expander-5.png": {
-    "hasText": true,
-    "textRaw": "BOLT\nO\n\u00a31 MILLION QANL\n18",
-    "confidence": 0.78
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
   },
   "gameplay/spine/cash-bolt-expander-6.png": {
     "hasText": true,
-    "textRaw": "CASH\n\u706b\u817f\n132\nEXPANDER\n(x2)\n\u00a3\nCH\nx2\nx2\n3\nx2\n\u00a3",
-    "confidence": 0.79
+    "textRaw": "£1 MILLION",
+    "confidence": 0.86
+  },
+  "gameplay/spine/cash-bolt-expander-7.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-8.png": {
+    "hasText": false,
+    "textRaw": "",
+    "confidence": null
+  },
+  "gameplay/spine/cash-bolt-expander-9.png": {
+    "hasText": true,
+    "textRaw": "(M)\nPLAY",
+    "confidence": 0.8
   },
   "gameplay/sprite/common/resume_button.png": {
     "hasText": false,
