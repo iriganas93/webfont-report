@@ -10,7 +10,7 @@ h1 {
     margin-bottom: 40px;
 }
 h2 {
-   margin: 0;
+    margin: 0;
 }
 
 h3 {
@@ -111,4 +111,13 @@ h3 {
 
 .files-list {
     color: #97b7d4;
+}
+
+button {
+    background: #065b76;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
 }

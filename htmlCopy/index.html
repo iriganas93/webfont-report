@@ -1,87 +1,89 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>OCR Game Layer Text Viewer</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <h1>Game OCR Text Results by Layer</h1>
+<head>
+    <meta charset="UTF-8" />
+    <title>OCR Game Layer Text Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>Game OCR Text Results by Layer</h1>
 
-        <div id="container"></div>
+<div style="text-align: center; margin-bottom: 20px;">
+    <a href="ocr-spreadsheet.csv" download>
+        <button>Download CSV Export</button>
+    </a>
+</div>
 
-        <script src="index.js"></script>
-        <!-- Load the OCR data -->
-        <script>
-            function camelCaseToHuman(text) {
-                if (!text) return "";
+<div id="container"></div>
 
-                 // capitalize first letter
-                return text
-                    .replace(/([a-z])([A-Z])/g, "$1 $2")  // insert space between lowercase and uppercase
-                    .replace(/^./, (str) => str.toUpperCase());
-            }
+<script src="index.js"></script>
+<script>
+    function camelCaseToHuman(text) {
+        if (!text) return "";
+        return text
+            .replace(/([a-z])([A-Z])/g, "$1 $2")
+            .replace(/^./, (str) => str.toUpperCase());
+    }
 
-            function renderData(data) {
-                const container = document.getElementById("container");
-                container.innerHTML = "";
+    function renderData(data) {
+        const container = document.getElementById("container");
+        container.innerHTML = "";
 
-                for (const layerName in data) {
-                    const layer = data[layerName];
-                    const layerDiv = document.createElement("div");
-                    layerDiv.className = "layer";
+        for (const layerName in data) {
+            const layer = data[layerName];
+            const layerDiv = document.createElement("div");
+            layerDiv.className = "layer";
 
-                    const totalCount = layer.count.sprites + layer.count.spines;
+            const totalCount = layer.count.sprites + layer.count.spines;
 
-                    layerDiv.innerHTML = `
+            layerDiv.innerHTML = `
                     <div class="title">
                         <h2>${camelCaseToHuman(layerName)}</h2>
                         <div class="summary">
                             <div>Total Images: <span>${totalCount}</span></div>
                             <div>Sprites: <span>${layer.count.sprites}</span></div>
                             <div>Spines: <span>${layer.count.spines}</span></div>
+                        </div>
                     </div>
-            `;
+                `;
 
-                    const imagesDiv = document.createElement("div");
-                    imagesDiv.className = "images";
+            const imagesDiv = document.createElement("div");
+            imagesDiv.className = "images";
 
-                    const allImages = [...layer.images.sprites, ...layer.images.spines];
-                    allImages.forEach((imageData) => {
-                        if( imageData.data.confidence && imageData.data.confidence > 0.75 ) {
-                            const imagePath = imageData.image;
-                            const box = document.createElement("div");
-                            box.className = "image-box";
-                            const fileName = imagePath.split("/").pop();
-                            const isSpine = imagePath.includes("spine");
+            const allImages = [...layer.images.sprites, ...layer.images.spines];
+            allImages.forEach((imageData) => {
+                if (imageData.data.confidence && imageData.data.confidence > 0.75) {
+                    const imagePath = imageData.image;
+                    const box = document.createElement("div");
+                    box.className = "image-box";
+                    const fileName = imagePath.split("/").pop();
+                    const isSpine = imagePath.includes("spine");
 
-                            box.innerHTML = `
-                                <img src="images/${fileName}" alt="${fileName}">
-                                <div class="label ${isSpine ? "spine" : "sprite"}">${isSpine ? "Spine" : "Sprite"}</div>
-                                <div class="info">${fileName}</div>
-                                <div class="text">Text: <span>${imageData.data.textRaw}</span></div>
-                            `;
-                            imagesDiv.appendChild(box);
-                        }
-                    });
-
-                    layerDiv.appendChild(imagesDiv);
-
-                    const filesDiv = document.createElement("div");
-                    filesDiv.className = "files";
-                    filesDiv.innerHTML = `<h3>Code Usage of Assets</h3>
-                        <div class="files-list">
-                            ${layer.files.join("<br>")}
-                        </div>`
-                    ;
-                    layerDiv.appendChild(filesDiv);
-
-                    container.appendChild(layerDiv);
+                    box.innerHTML = `
+                            <img src="images/${fileName}" alt="${fileName}">
+                            <div class="label ${isSpine ? "spine" : "sprite"}">${isSpine ? "Spine" : "Sprite"}</div>
+                            <div class="info">${fileName}</div>
+                            <div class="text">Text: <span>${imageData.data.textRaw}</span></div>
+                        `;
+                    imagesDiv.appendChild(box);
                 }
-            }
+            });
 
-            // Call rendering immediately after data loaded
-            renderData(ocrData);
-        </script>
-    </body>
+            layerDiv.appendChild(imagesDiv);
+
+            const filesDiv = document.createElement("div");
+            filesDiv.className = "files";
+            filesDiv.innerHTML = `<h3>Code Usage of Assets</h3>
+                    <div class="files-list">
+                        ${layer.files.join("<br>")}
+                    </div>`;
+            layerDiv.appendChild(filesDiv);
+
+            container.appendChild(layerDiv);
+        }
+    }
+
+    renderData(ocrData);
+</script>
+</body>
 </html>
