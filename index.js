@@ -81,10 +81,11 @@ async function getWebFontOCR({
     }
 
     const layersResults = getResourceUsageByLayer(results, gameLayers);
+    generateOcrDataJS("webfonts-ocr", layersResults);
+
     if (layerFilesPath) {
         saveReportFile(layerFilesPath, layersResults.gameLayersUsage);
         console.log(`📋 Layer files usage written to: ${layerFilesPath}`);
-        generateOcrDataJS("webfonts-ocr", layersResults);
     }
 
     if (copyTextImagesTo) {

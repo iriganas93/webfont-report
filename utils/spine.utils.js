@@ -44,7 +44,7 @@ const parseAtlas = (atlasContent) => {
 
     for (const line of lines) {
         if (line.endsWith(".png")) {
-            console.log("🖼 Found image page:", line);
+            // console.log("🖼 Found image page:", line);
             currentImage = line;
             imageToSpines[currentImage] = new Set();
             continue;
