@@ -17,6 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "@google-cloud/vision": "^5.1.0",
+    "exceljs": "^4.4.0",
+    "image-size": "^2.0.2",
     "node-fetch": "^3.3.2",
     "semver": "^7.7.2"
   },

@@ -5,6 +5,7 @@ const { getImagesOCR } = require("./utils/ocr.utils");
 const { getCodeFilesUsage, getOCRTextMap, getResourceUsageByLayer } = require("./utils/transformations.utils");
 const { extractSpineImageUsage } = require("./utils/spine.utils");
 const { copyHtmlViewerFiles } = require("./utils/htmlViewer.utils");
+const { generateSpreadsheetData } = require("./utils/csv.utils");
 
 /**
  * Copies all images with hasText: true into a single output folder (flat)
@@ -91,6 +92,8 @@ async function getWebFontOCR({
     if (copyTextImagesTo) {
         copyTextImagesFlat(results, imageDir, copyTextImagesTo);
     }
+
+    await generateSpreadsheetData(results, imageDir, "./webfonts-ocr/ocr-spreadsheet.csv");
 
     return layersResults;
 }
