@@ -16,18 +16,19 @@ const generateSpreadsheetData = async (ocrResults, imageDir, outputXlsxPath) => 
     const worksheet = workbook.addWorksheet("OCR Results");
 
     worksheet.columns = [
-        { header: "Image", key: "image", width: 20 },
-        { header: "TextKey", key: "textKey", width: 40 },
-        { header: "TextValue", key: "textValue", width: 40 },
+        { header: "Image", key: "image", width: 35 },
+        { header: "TextKey", key: "textKey", width: 35 },
+        { header: "TextValue", key: "textValue", width: 50 },
     ];
 
     let rowIndex = 2;
 
     for (const [imagePath, data] of Object.entries(ocrResults)) {
         if (!data.hasText || !data.textRaw) continue;
+        if (typeof data.confidence === "number" && data.confidence < 0.8) continue;
 
         const textKey = convertFilenameToKey(imagePath);
-        const cleanText = data.textRaw.replace(/\n/g, " ").replace(/"/g, "''");
+        const cleanText = data.textRaw.replace(/"/g, "''");
 
         worksheet.addRow({ image: "", textKey, textValue: cleanText });
 
@@ -53,9 +54,9 @@ const generateSpreadsheetData = async (ocrResults, imageDir, outputXlsxPath) => 
             extension: path.extname(imagePath).substring(1).toLowerCase(),
         });
 
-        // Slightly larger max size
-        const maxWidth = 140; // previously 100
-        const maxHeight = 120; // previously 80
+        // Double the previous max size
+        const maxWidth = 280;
+        const maxHeight = 240;
         const widthRatio = maxWidth / dimensions.width;
         const heightRatio = maxHeight / dimensions.height;
         const scale = Math.min(widthRatio, heightRatio, 1);
@@ -68,7 +69,8 @@ const generateSpreadsheetData = async (ocrResults, imageDir, outputXlsxPath) => 
         });
 
         // Ensure minimum row height of 50
-        worksheet.getRow(rowIndex).height = Math.max(scaledHeight * 0.75, 50);
+        const calculatedRowHeight = Math.max(scaledHeight * 0.75, 50);
+        worksheet.getRow(rowIndex).height = calculatedRowHeight;
 
         // Styling for image cell
         const cell = worksheet.getCell(`A${rowIndex}`);
