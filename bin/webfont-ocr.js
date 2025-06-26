@@ -55,14 +55,9 @@ if (!config?.gameLayers) {
 getWebFontOCR({
     imageDir: resolveFromRoot(config.imageDir),
     componentDir: resolveFromRoot(config.componentDir),
-    resultPath: config?.textMapPath ? resolveFromRoot(config.resultPath) : null,
-    textMapPath: config?.textMapPath ? resolveFromRoot(config.textMapPath) : null,
-    summaryPath: config?.summaryPath ? resolveFromRoot(config.summaryPath) : null,
-    layerFilesPath: config?.layerFilesPath ? resolveFromRoot(config.layerFilesPath) : null,
-    gameLayers: config.gameLayers,
-    htmlViewer: config.htmlViewer,
+    writeReportsFiles: config.writeReportsFiles ?? true,
     excludedFolders: config.excludedFolders || [],
-    copyTextImagesTo: resolveFromRoot(config.copyTextImagesTo),
+    gameLayers: config.gameLayers,
 }).then((result) => {
     console.log(`📊 Resource usage by game layer:`, result.counts);
     console.log("✅ Analysis complete.");

@@ -12,9 +12,10 @@ const ensureDirForFile = (filePath) => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 };
 
-const saveReportFile = (filePath, reportData) => {
+const saveReportFile = (filePath, reportData, label = "OCR Results") => {
     ensureDirForFile(filePath);
     fs.writeFileSync(filePath, JSON.stringify(reportData, null, 2), "utf8");
+    console.log(`📋 ${label} written to: ${filePath}`);
 };
 
 const getAllImageFilesPaths = (dirPath, excludedFolders) => {
@@ -50,6 +51,35 @@ const generateOcrDataJS = (outputPath, layersResults) => {
     }
 };
 
+/**
+ * Copies all images with hasText: true into a single output folder (flat)
+ */
+function copyTextImagesFlat(results, imageDir, outputDir) {
+    console.log(`📦 Copying images with text to: ${outputDir}`);
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    for (const [imageRelPath, data] of Object.entries(results)) {
+        if (!data.hasText) continue;
+
+        const sourcePath = path.join(imageDir, imageRelPath);
+        const fileNameOnly = path.basename(imageRelPath);
+        const destPath = path.join(outputDir, fileNameOnly);
+
+        try {
+            if (!fs.existsSync(sourcePath)) {
+                console.warn(`⚠️ Source image not found: ${sourcePath}`);
+                continue;
+            }
+            fs.copyFileSync(sourcePath, destPath);
+            // console.log(`✅ Copied: ${fileNameOnly}`);
+        } catch (err) {
+            console.error(`❌ Failed to copy ${fileNameOnly}:`, err.message);
+        }
+    }
+}
+
 module.exports = {
     isImageFile,
     isExcludedFolder,
@@ -57,4 +87,5 @@ module.exports = {
     ensureDirForFile,
     saveReportFile,
     generateOcrDataJS,
+    copyTextImagesFlat,
 };
